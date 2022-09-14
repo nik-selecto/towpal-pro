@@ -1,8 +1,7 @@
-import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
+import { validateConfig } from './validate-config';
 
-@Module({
-	controllers: [],
-	providers: [],
-	exports: [],
-})
-export class ConfigModule {}
+export const TowPalConfig = ConfigModule.forRoot({
+  isGlobal: true,
+  validate: validateConfig,
+});

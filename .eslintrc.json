@@ -6,7 +6,6 @@
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "no-trailing-spaces": "error",
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {
@@ -38,6 +37,15 @@
         "jest": true
       },
       "rules": {}
+    },
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "semi": "error",
+        "quotes": ["error", "single"],
+        "no-trailing-spaces": "error",
+        "@typescript-eslint/no-explicit-any": "off"
+      }
     }
   ]
 }
