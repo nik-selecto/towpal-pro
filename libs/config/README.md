@@ -1,13 +1,17 @@
-# config
-
-This library was generated with [Nx](https://nx.dev).
-
-
-
-
-
-## Running unit tests
-
-Run `nx test config` to execute the unit tests via [Jest](https://jestjs.io).
-
-
+## How add new environment variable?
+At first add it to `libs/config/src/lib/config.ts`:
+```ts
+export class Config {
+  @Transform(({ value }) => +value)
+  @IsNotEmpty()
+  GOOD_LUCK = 777;
+}
+```
+Then add it to `.env` file.
+```
+GOOD_LUCK=777
+```
+---
+* If validation failed, bootstrap process will stop.
+* If value is not string use `@Transform` decorator
+* If property has default value and my not exists in `.env`, you should write it as default like in example above.
