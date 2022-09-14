@@ -2,6 +2,8 @@
 
 ## NX
 For manage this monorepo the NX tool is used. For api projects [Nest Plugin](https://nx.dev/packages/nest) is used.
+### Some tips and hacks:
+* use `--dry-run` command before every cli command that make some generations to see what it will produce before actual file changing
 ## CLI
 * in general see [NX-cli](https://nx.dev/reference/commands#nx-cli-commands) rules
 * by default `process.env.NODE_ENV=development`, add `--prod` flag to make it `production`
