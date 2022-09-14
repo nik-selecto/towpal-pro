@@ -8,11 +8,6 @@
     "test": "nx test",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm test"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
