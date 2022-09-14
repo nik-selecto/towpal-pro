@@ -1,4 +1,7 @@
 # TowPal
+
+## NX
+For manage this monorepo the NX tool is used. For api projects [Nest Plugin](https://nx.dev/packages/nest) is used.
 ## CLI
 * in general see [NX-cli](https://nx.dev/reference/commands#nx-cli-commands) rules
 * by default `process.env.NODE_ENV=development`, add `--prod` flag to make it `production`
