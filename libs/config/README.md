@@ -15,3 +15,13 @@ GOOD_LUCK=777
 * If validation failed, bootstrap process will stop.
 * If value is not string use `@Transform` decorator
 * If property has default value and my not exists in `.env`, you should write it as default like in example above.
+## How use:
+```ts
+export class SomeWhere {
+  constructor(private conf: ConfigService<ProcessEnvType>) {}
+
+  doSomething() {
+    console.info(conf.get('GOOD_LUCK'));
+  }
+}
+```
