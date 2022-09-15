@@ -1,6 +1,7 @@
 import { ConfigService } from '@nestjs/config';
 import { Config } from '@towpal-pro/config';
 import { DataSourceOptions } from 'typeorm';
+import { join } from 'path';
 
 export function generateTypeOrmConfig(config: ConfigService<Config>, cli = false): DataSourceOptions {
   return {
@@ -11,8 +12,8 @@ export function generateTypeOrmConfig(config: ConfigService<Config>, cli = false
     password: config.get('PG_PASS'),
     database: config.get('PG_DB'),
     migrations: [cli
-      ? `${process.cwd()}/libs/database/migrations/*.ts`
-      : `${__dirname}/migrations/*js`],
+      ? join(`${__dirname}/../../migrations/*.ts`)
+      : join(`${__dirname}/../../migrations/*.js`)],
     migrationsTableName: 'migrations',
   };
 }

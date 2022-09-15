@@ -19,7 +19,7 @@ export default new Promise((resolve, reject) => {
     NestFactory.createApplicationContext(OrmConfigGenerator).then((app) => {
       const config = app.get<ConfigService<Config>>(ConfigService);
 
-      resolve(new DataSource(generateTypeOrmConfig(config)));
+      resolve(new DataSource(generateTypeOrmConfig(config, true)));
     }).catch(reject);
   } catch (error) {
     reject(error);

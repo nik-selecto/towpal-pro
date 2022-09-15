@@ -5,5 +5,6 @@ Environment variables are taken from TowPalConfig module, so see `.env` file.
 will be used in:
 * `DatabaseModule`
 * `libs/database/ormconfig.ts` for CLI operations
+# [Migrations](./migrations/README.md)
 # CLI
 See scripts in package.json. There should be `migration:run` etc.
