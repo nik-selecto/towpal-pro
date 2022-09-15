@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "admin-api": "apps/admin-api",
-    "config": "libs/config"
+    "config": "libs/config",
+    "database": "libs/database"
   }
 }

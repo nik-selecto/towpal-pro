@@ -6,6 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
+    "migration:run": "cd libs/database && npx typeorm-ts-node-commonjs migration:run  -d ormconfig.ts",
+    "migration:revert": "cd libs/database && npx typeorm-ts-node-commonjs migration:revert  -d ormconfig.ts",
     "prepare": "husky install"
   },
   "config": {
