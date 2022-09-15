@@ -1,18 +1,19 @@
-import { ApolloDriverAsyncConfig } from '@nestjs/apollo';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { DynamicModule } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { Config } from '@towpal-pro/config';
-import { NotEmptyArr } from '@towpal-pro/utils';
+import { join } from 'path';
 
 
 export function getTowpalGqlModule(
-  autoSchemaFile: string,
+  autoSchemaFile: string | true,
   // eslint-disable-next-line @typescript-eslint/ban-types
-  include: NotEmptyArr<Function>,
+  include: Function[] = [],
 ): DynamicModule {
-  return GraphQLModule.forRoot<ApolloDriverAsyncConfig>({
+  return GraphQLModule.forRootAsync<ApolloDriverConfig>({
     inject: [ConfigService],
+    driver: ApolloDriver,
     useFactory(config: ConfigService<Config>) {
       return {
         playground: config.get('NODE_ENV') === 'production' ? false : true,
