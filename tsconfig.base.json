@@ -23,6 +23,12 @@
       ],
       "@towpal-pro/database": [
         "libs/database/src/index.ts"
+      ],
+      "@towpal-pro/graphql": [
+        "libs/graphql/src/index.ts"
+      ],
+      "@towpal-pro/utils": [
+        "libs/utils/src/index.ts"
       ]
     }
   },

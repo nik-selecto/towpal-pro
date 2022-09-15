@@ -4,6 +4,8 @@
   "projects": {
     "admin-api": "apps/admin-api",
     "config": "libs/config",
-    "database": "libs/database"
+    "database": "libs/database",
+    "graphql": "libs/graphql",
+    "utils": "libs/utils"
   }
 }
