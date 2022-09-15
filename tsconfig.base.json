@@ -24,6 +24,9 @@
       "@towpal-pro/database": [
         "libs/database/src/index.ts"
       ],
+      "@towpal-pro/firebase-admin": [
+        "libs/firebase-admin/src/index.ts"
+      ],
       "@towpal-pro/graphql": [
         "libs/graphql/src/index.ts"
       ],

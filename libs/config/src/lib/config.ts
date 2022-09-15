@@ -8,6 +8,9 @@ import {
 import { Transform } from 'class-transformer';
 
 export class Config {
+  @IsString()
+  @IsNotEmpty()
+  GOOGLE_APPLICATION_CREDENTIALS: string;
   @IsIn(['production', 'development'])
   @IsNotEmpty()
   NODE_ENV ='development';
