@@ -1,28 +1,11 @@
-import { Column, Entity } from 'typeorm';
-import { BasePgEntity } from '../lib/base-pg.entity';
+import {ChildEntity, Column, Entity} from 'typeorm';
 import {IOperator} from '@towpal-pro/types';
+import {UserEntity} from './user.entity';
 
-@Entity('operators')
-export class OperatorEntity extends BasePgEntity implements IOperator{
+@ChildEntity()
+export class OperatorEntity extends UserEntity implements IOperator{
   @Column()
   password: string;
-
-  @Column()
-  firstName: string;
-
-  @Column()
-  lastName: string;
-
-  @Column({
-    unique: true,
-    nullable: true,
-  })
-  email: string;
-
-  @Column({
-    unique: true,
-  })
-  mobileNumber: string;
 
   @Column({
     unique: true,

@@ -7,6 +7,7 @@ import {SnakeNamingStrategy} from 'typeorm-naming-strategies';
 import {entities} from './entities';
 
 
+
 export async function generateTypeOrmConfig(
   config: ConfigService<Config>,
   cli = false,
