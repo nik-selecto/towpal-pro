@@ -18,6 +18,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@towpal-pro/auth": [
+        "libs/auth/src/index.ts"
+      ],
       "@towpal-pro/config": [
         "libs/config/src/index.ts"
       ],
