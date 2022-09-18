@@ -42,3 +42,5 @@ npx nx run-many --target=build --project=admin-api,shipper-api
 ### // TODO
 * CI
   * now merge allowed even if some checks are failed but merge should be declined
+* Tests
+  * Array.prototype.at() is not defined (how upgrade es version to 2022?)
