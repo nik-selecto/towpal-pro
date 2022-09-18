@@ -7,7 +7,7 @@ export interface IBase {
   id: string;
   createdAt: Date;
   updatedAt: Date;
-}
+};
 // here should be error and merge should be canceled
 // eslint error above for experimental purposes only
 
