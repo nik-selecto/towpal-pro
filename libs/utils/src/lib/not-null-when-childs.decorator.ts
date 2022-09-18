@@ -1,12 +1,14 @@
 import {Check} from 'typeorm';
 import {toSnakeCaseFn} from './to-snake-case.fn';
-import {entityToTypeName} from './entity-to-type.name.fn';
 
-export function NotNullWhenSuchChildType() {
+export function NotNullWhenTypes(childTypes: string[]) {
   return function (className, propName) {
+    const types = childTypes.map((child) => `'${child}'`).join(', ');
+
     Check(`
+      "type" NOT IN (${types})
+      OR
       "${toSnakeCaseFn(propName)}" IS NOT NULL
-      AND "type" = '${entityToTypeName(className.name)}'  
     `)(className, propName);
   };
 }
