@@ -18,14 +18,23 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@towpal-pro/auth": [
+        "libs/auth/src/index.ts"
+      ],
       "@towpal-pro/config": [
         "libs/config/src/index.ts"
       ],
       "@towpal-pro/database": [
         "libs/database/src/index.ts"
       ],
+      "@towpal-pro/firebase-admin": [
+        "libs/firebase-admin/src/index.ts"
+      ],
       "@towpal-pro/graphql": [
         "libs/graphql/src/index.ts"
+      ],
+      "@towpal-pro/types": [
+        "libs/types/src/index.ts"
       ],
       "@towpal-pro/utils": [
         "libs/utils/src/index.ts"

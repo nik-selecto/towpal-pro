@@ -3,9 +3,12 @@
   "version": 2,
   "projects": {
     "admin-api": "apps/admin-api",
+    "auth": "libs/auth",
     "config": "libs/config",
     "database": "libs/database",
+    "firebase-admin": "libs/firebase-admin",
     "graphql": "libs/graphql",
+    "types": "libs/types",
     "utils": "libs/utils"
   }
 }
