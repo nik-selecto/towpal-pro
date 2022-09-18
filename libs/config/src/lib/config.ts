@@ -34,7 +34,7 @@ export class Config {
   PG_PASS = 'postgres';
   @IsString()
   @IsNotEmpty()
-  PG_DB = 'ridy';
+  PG_DB = 'towpal_pro';
   @IsString()
   @IsNotEmpty()
   REDIS_HOST = 'localhost';
@@ -43,7 +43,7 @@ export class Config {
   REDIS_PORT = 6379;
   @Transform(({ value }) => value === 'true')
   @IsBoolean()
-  FORCE_SYNC_DB = true;
+  FORCE_SYNC_DB = false;
 
   HOST?: string;
   FLEET_API_PORT?: string;

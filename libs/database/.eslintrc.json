@@ -3,7 +3,8 @@
     "../../.eslintrc.json"
   ],
   "ignorePatterns": [
-    "!**/*"
+    "!**/*",
+    "ormconfig.ts"
   ],
   "overrides": [
     {

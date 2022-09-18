@@ -7,7 +7,7 @@ import { generateTypeOrmConfig } from './generate-typeorm-config';
 
 @Module({
   imports: [
-    TowPalConfig,
+    TowPalConfig(),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
       useFactory(config: ConfigService<Config>) {
