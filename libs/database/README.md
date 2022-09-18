@@ -1,4 +1,8 @@
+### [Main page](../../README.md)
 # Database library
+
+--- 
+
 ## Configuration
 All configuration see in `libs/database/lib/generate-typeorm-config.ts`;
 Environment variables are taken from TowPalConfig module, so see `.env` file.

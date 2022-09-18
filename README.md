@@ -1,14 +1,13 @@
 # TowPalPro
+
 ---
----
----
-# === 0_o Explore carefully! And enjoy! :D ===
-## [Configuration, environment, etc.](./libs/config/README.md)
-## [DatabaseModule, postgres, migrations, etc.](./libs/database/README.md)
-## [Firebase-admin](./libs/firebase-admin/README.md)
----
----
----
+
+> Explore carefully! And enjoy coding! :D
+* ### [Configuration, environment, etc.](./libs/config/README.md)
+* ### [DatabaseModule, postgres, migrations, etc.](./libs/database/README.md)
+* ### [Firebase-admin](./libs/firebase-admin/README.md) 
+* ### [Tests](./__tests__/README.md)
+
 ## Git settings
 * use committizen for make convention messages:
 ```
