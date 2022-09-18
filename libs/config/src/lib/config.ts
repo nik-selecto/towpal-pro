@@ -8,9 +8,12 @@ import {
 import { Transform } from 'class-transformer';
 
 export class Config {
+  @IsString()
+  @IsNotEmpty()
+  GOOGLE_APPLICATION_CREDENTIALS: string;
   @IsIn(['production', 'development'])
   @IsNotEmpty()
-  NODE_ENV!: 'production' | 'development';
+  NODE_ENV ='development';
   @Transform(({ value }) => +value)
   @IsNumber()
   ADMIN_API_PORT = 3000;
@@ -22,16 +25,16 @@ export class Config {
   DRIVER_API_PORT = 3002;
   @IsString()
   @IsNotEmpty()
-  MYSQL_HOST = 'localhost';
+  PG_HOST = 'localhost';
   @IsString()
   @IsNotEmpty()
-  MYSQL_USER = 'root';
+  PG_USER = 'postgres';
   @IsString()
   @IsNotEmpty()
-  MYSQL_PASS = 'deraultpassword';
+  PG_PASS = 'postgres';
   @IsString()
   @IsNotEmpty()
-  MYSQL_DB = 'ridy';
+  PG_DB = 'towpal_pro';
   @IsString()
   @IsNotEmpty()
   REDIS_HOST = 'localhost';
@@ -40,7 +43,7 @@ export class Config {
   REDIS_PORT = 6379;
   @Transform(({ value }) => value === 'true')
   @IsBoolean()
-  FORCE_SYNC_DB = true;
+  FORCE_SYNC_DB = false;
 
   HOST?: string;
   FLEET_API_PORT?: string;

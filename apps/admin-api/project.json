@@ -7,6 +7,14 @@
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "assets": [
+          {
+            "input": "libs/firebase-admin/secrets",
+            "glob": "**/*",
+            "ignore": ["**/.gitignore"],
+            "output": "/assets/firebase-admin/secrets"
+          }
+        ],
         "outputPath": "dist/apps/admin-api",
         "main": "apps/admin-api/src/main.ts",
         "tsConfig": "apps/admin-api/tsconfig.app.json"
