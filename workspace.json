@@ -8,6 +8,7 @@
     "database": "libs/database",
     "firebase-admin": "libs/firebase-admin",
     "graphql": "libs/graphql",
+    "types": "libs/types",
     "utils": "libs/utils"
   }
 }

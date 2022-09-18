@@ -33,6 +33,9 @@
       "@towpal-pro/graphql": [
         "libs/graphql/src/index.ts"
       ],
+      "@towpal-pro/types": [
+        "libs/types/src/index.ts"
+      ],
       "@towpal-pro/utils": [
         "libs/utils/src/index.ts"
       ]

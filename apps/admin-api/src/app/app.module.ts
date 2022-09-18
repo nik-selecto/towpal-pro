@@ -10,7 +10,7 @@ import { AppService } from './app.service';
 
 @Module({
   imports: [
-    TowPalConfig,
+    TowPalConfig(),
     DatabaseModule,
     FirebaseAdminModule,
     getTowpalGqlModule(join(process.cwd(), 'admin-api.schema.gql')),

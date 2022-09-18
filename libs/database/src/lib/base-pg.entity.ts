@@ -1,7 +1,8 @@
 import { CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {IBase} from '@towpal-pro/types';
 
 @Entity()
-export abstract class BasePgEntity {
+export abstract class BasePgEntity implements IBase {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
@@ -9,12 +10,12 @@ export abstract class BasePgEntity {
     type: 'timestamp',
     default: () => 'CURRENT_TIMESTAMP(6)',
   })
-  public createdAt: Date;
+  createdAt: Date;
 
   @UpdateDateColumn({
     type: 'timestamp',
     default: () => 'CURRENT_TIMESTAMP(6)',
     onUpdate: 'CURRENT_TIMESTAMP(6)',
   })
-  public updatedAt: Date;
+  updatedAt: Date;
 }
