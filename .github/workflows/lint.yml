@@ -18,4 +18,4 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Code Linting
-        run: npm run lintK
+        run: npm run lint
