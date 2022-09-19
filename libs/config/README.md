@@ -1,4 +1,8 @@
-## How add new environment variable?
+### [Main page](../../README.md)
+
+# How add new environment variable?
+
+---
 At first add it to `libs/config/src/lib/config.ts`:
 ```ts
 export class Config {

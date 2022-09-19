@@ -1,14 +1,15 @@
 # TowPalPro
+
 ---
----
----
-# === 0_o Explore carefully! And enjoy! :D ===
-## [Configuration, environment, etc.](./libs/config/README.md)
-## [DatabaseModule, postgres, migrations, etc.](./libs/database/README.md)
-## [Firebase-admin](./libs/firebase-admin/README.md)
----
----
----
+
+> Explore carefully! And enjoy coding! :D
+* ### [Configuration, environment, etc.](./libs/config/README.md)
+* ### [DatabaseModule, postgres, migrations, etc.](./libs/database/README.md)
+* ### [Firebase-admin](./libs/firebase-admin/README.md) 
+* ### [Tests](./__tests__/README.md)
+
+![Graph of the project](./graph/graph-2022-09-19 04:34:54.png)
+
 ## Git settings
 * use committizen for make convention messages:
 ```
@@ -43,3 +44,5 @@ npx nx run-many --target=build --project=admin-api,shipper-api
 ### // TODO
 * CI
   * now merge allowed even if some checks are failed but merge should be declined
+* Tests
+  * Array.prototype.at() is not defined (how upgrade es version to 2022?)

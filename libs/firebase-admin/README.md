@@ -1,4 +1,8 @@
+### [Main page](../../README.md)
+
 # Firebase-admin
+
+---
 
 ## Firebase secrets sharing using assets:
 In your `.env` file your should have `GOOGLE_APPLICATION_CREDENTIALS` variable.
