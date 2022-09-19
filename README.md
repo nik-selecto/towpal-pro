@@ -8,7 +8,8 @@
 * ### [Firebase-admin](./libs/firebase-admin/README.md) 
 * ### [Tests](./__tests__/README.md)
 
-![Graph of the project](./graph/graph-2022-09-19 04:34:54.png)
+![Graph of the project](./graph/graph0.png)
+[Graph of the project](./graph/graph0.png)
 
 ## Git settings
 * use committizen for make convention messages:
