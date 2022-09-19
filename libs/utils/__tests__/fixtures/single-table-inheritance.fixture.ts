@@ -22,7 +22,9 @@ export abstract class TestStiParent {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column()
+  @Column({
+    nullable: true,
+  })
   common: string;
 
   @Column({

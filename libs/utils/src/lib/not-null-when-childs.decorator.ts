@@ -9,8 +9,7 @@ export function NotNullWhenTypes(childTypes: string[]) {
       OR
       "${toSnakeCaseFn(propName)}" IS NOT NULL
     `;
-    console.log(className);
-    console.log(constraint);
+
     Check(constraint)(className, propName);
   };
 }
