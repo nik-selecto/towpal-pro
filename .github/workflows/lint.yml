@@ -1,0 +1,21 @@
+name: LINT
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - staging
+      - production
+jobs:
+  lint:
+    name: 'ESLINT LINTING'
+    runs-on: 'ubuntu-22.04'
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v2
+      - name: Code Checkout
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm ci
+      - name: Code Linting
+        run: npm run lint

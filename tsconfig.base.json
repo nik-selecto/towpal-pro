@@ -8,23 +8,42 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2021",
+    "target": "es2022",
     "module": "esnext",
     "lib": [
-      "es2021",
+      "es2022",
       "dom"
     ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@towpal-pro/auth": [
+        "libs/auth/src/index.ts"
+      ],
       "@towpal-pro/config": [
         "libs/config/src/index.ts"
+      ],
+      "@towpal-pro/database": [
+        "libs/database/src/index.ts"
+      ],
+      "@towpal-pro/firebase-admin": [
+        "libs/firebase-admin/src/index.ts"
+      ],
+      "@towpal-pro/graphql": [
+        "libs/graphql/src/index.ts"
+      ],
+      "@towpal-pro/types": [
+        "libs/types/src/index.ts"
+      ],
+      "@towpal-pro/utils": [
+        "libs/utils/src/index.ts"
       ]
     }
   },
   "exclude": [
     "node_modules",
-    "tmp"
+    "tmp",
+    "__tests__"
   ]
 }
