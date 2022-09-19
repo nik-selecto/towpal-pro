@@ -1,31 +1,15 @@
-import { Column, Entity } from 'typeorm';
-import { BasePgEntity } from '../lib/base-pg.entity';
-import {IOperator} from '@towpal-pro/types';
+import {IOperator, UserType} from '@towpal-pro/types';
+import {UserEntity} from '../lib/users/user.entity';
+import {ChildEntity, Column} from 'typeorm';
+import {NotNullWhenTypes} from '@towpal-pro/utils';
 
-@Entity('operators')
-export class OperatorEntity extends BasePgEntity implements IOperator{
-  @Column()
-  password: string;
-
-  @Column()
-  firstName: string;
-
-  @Column()
-  lastName: string;
-
+@ChildEntity(UserType.OPERATOR)
+export class OperatorEntity extends UserEntity implements IOperator {
   @Column({
-    unique: true,
     nullable: true,
   })
-  email: string;
-
-  @Column({
-    unique: true,
-  })
-  mobileNumber: string;
-
-  @Column({
-    unique: true,
-  })
+  @NotNullWhenTypes([UserType.OPERATOR])
   nikName: string;
+  @Column()
+  password: string;
 }
